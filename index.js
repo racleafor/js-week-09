@@ -33,13 +33,13 @@ function head2() {
 
 // Write a function that takes an array and returns
 // an array containing all but the first item
-function tail() {
+function tail1() {
   return 0
 }
 
 // Write a function similar to head1 & head2 *but*
-// with the **arguments** passed into the function;
-// see JavaScript Allongé, p.89 for help
+// using the *arguments passed into the function*
+// (simply return the first argument)
 function head3() {
   return 0
 }
@@ -48,6 +48,14 @@ function head3() {
 // and returns the number of arguments passed in
 // (hints: argument gathering, p.89 and .length, p.77)
 function countMyArgs() {
+  return 0
+}
+
+// Write a function similar to tail1 *but*
+// using the *arguments passed into the function*
+// (return all but the first argument as an array)
+// see JavaScript Allongé, p.89 for help
+function tail2() {
   return 0
 }
 
@@ -68,5 +76,6 @@ module.exports = {
   head3,
   howMany,
   mySimpleArray,
-  tail,
+  tail1,
+  tail2,
 }

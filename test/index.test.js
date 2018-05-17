@@ -7,7 +7,8 @@ const {
   head3,
   howMany,
   mySimpleArray,
-  tail,
+  tail1,
+  tail2,
 } = require('../index')
 
 /* eslint-disable */
@@ -39,10 +40,11 @@ test('returns the first item in a different way', () => {
 })
 
 test('returns all but the first item of an array', () => {
-  const result = tail([1, 2, 3])
+  const result = tail1([1, 2, 3])
   const expected = [2, 3]
   expect(result).toHaveLength(expected.length)
   expect(result).toEqual(expect.arrayContaining(expected))
+  expect(result).not.toContain(1)
 })
 
 test('returns the first argument', () => {
@@ -56,6 +58,14 @@ test('counts the arguments', () => {
   expect(countMyArgs(1, 1)).toBe(2)
   expect(countMyArgs('help', 'me', 'I', 'need', 'it')).toBe(5)
   expect(countMyArgs()).toBe(0)
+})
+
+test('returns all but the first argument as an array', () => {
+  const result = tail2(1, 2, 3)
+  const expected = [2, 3]
+  expect(result).toHaveLength(expected.length)
+  expect(result).toEqual(expect.arrayContaining(expected))
+  expect(result).not.toContain(1)
 })
 
 test('returns the length of an array or "Empty"', () => {
